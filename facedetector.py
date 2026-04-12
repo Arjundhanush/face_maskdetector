@@ -37,9 +37,9 @@ while True:
 
             pred = model.predict(face)[0][0]
 
-            if pred < 0.5:
+            if pred < 0.2:
                 label = "Mask"
-            elif pred > 0.7:
+            elif pred > 0.8:
                 label = "No Mask"
             else:
                 label = "Uncertain"
