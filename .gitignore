@@ -1,0 +1,23 @@
+# Environments
+venv/
+.venv/
+Scripts/
+
+# Models and Data
+dataset/
+model/
+face_detector/
+*.model
+*.keras
+*.caffemodel
+*.prototxt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# OS files
+.DS_Store
+Thumbs.db
