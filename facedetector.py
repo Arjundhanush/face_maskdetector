@@ -37,8 +37,19 @@ while True:
 
             pred = model.predict(face)[0][0]
 
-            label = "Mask" if pred < 0.5 else "No Mask"
-            color = (0, 255, 0) if label == "Mask" else (0, 0, 255)
+            if pred < 0.5:
+                label = "Mask"
+            elif pred > 0.7:
+                label = "No Mask"
+            else:
+                label = "Uncertain"
+            
+            if label == "Mask":
+                color = (0, 255, 0)
+            elif label == "No Mask":
+                color = (0, 0, 255)
+            else:
+                color = (0, 255, 255) # Yellow for Uncertain
 
             cv2.putText(frame, label, (startX, startY - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, color, 2)
