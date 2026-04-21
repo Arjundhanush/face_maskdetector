@@ -3,14 +3,8 @@ venv/
 .venv/
 Scripts/
 
-# Models and Data
+# Dataset (too large for git)
 dataset/
-model/
-face_detector/
-*.model
-*.keras
-*.caffemodel
-*.prototxt
 
 # Python
 __pycache__/
@@ -21,3 +15,11 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/

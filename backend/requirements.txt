@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+opencv-python-headless
+tensorflow
+numpy
+motor
+python-multipart
